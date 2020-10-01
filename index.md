@@ -42,4 +42,4 @@ opt.minimize(optpizza, m.pi/2)
         x: array([1.61841528])
 ```
 
-The solution for `alpha` is `1.6184` which gives `0.56776` for `x` and `8.16` for the cirles' diameter. 
+The solution for `alpha` is `1.6184` which gives `0.56776` for `x` and `8.16` for the diameter of the circles. 
