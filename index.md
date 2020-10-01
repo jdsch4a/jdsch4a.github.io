@@ -1,5 +1,8 @@
+Let `x` be the distance and `alpha` the angle of the endpoints of the cut measured with respect to be the former center of the pizza.
 
 <img src="images/pizza.jpg" alt="hi" class="inline"/>
+
+After repositioning the pieces as shown in the figure, minimize the radius of the circumscribed cirsles of the triangles with sides (a, c, 1+x) and (b, c, d):
 
 ```python
 from scipy import optimize as opt
@@ -38,3 +41,5 @@ opt.minimize(optpizza, m.pi/2)
   success: True
         x: array([1.61841528])
 ```
+
+The solution for `alpha` is `1.6184` which gives `0.56776` for `x` and `8.16` for the cirles' diameter. 
