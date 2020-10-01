@@ -1,3 +1,6 @@
+
+<img src="images/pizza.jpg" alt="hi" class="inline"/>
+
 ```python
 from scipy import optimize as opt
 from operator import sub
