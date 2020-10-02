@@ -1,3 +1,5 @@
+See: https://fivethirtyeight.com/features/can-you-eat-all-the-chocolates/
+
 Let `x` be the distance and `alpha` the angle of the endpoints of the cut measured with respect to be the former center of the pizza.
 
 <img src="images/pizza.jpg" alt="hi" class="inline"/>
@@ -14,14 +16,15 @@ def radius(a, b, c):
     A4 = 4 * m.sqrt(s * (s-a) * (s-b) * (s-c))
     return a * b * c / A4
     
+calc_side = lambda a, b, alpha: m.sqrt(a**2 + b**2 - 2*a*b * m.cos(alpha))
+calc_angle = lambda a, b, c: m.acos((a**2 + b**2 - c**2) / (2*a*b))
+
 def pizza(x, alpha):
     a = m.sqrt(2 - 2 * m.cos(alpha))
     beta = .5 * (m.pi  - alpha)
-    b = m.sqrt(a**2 + 4 - 4 * a * m.cos(beta))
-    c = m.sqrt(a**2 + (1+x)**2 - 2 * a * (1+x) * m.cos(beta))
-    gamma = m.acos((b**2 + c**2 - (1-x)**2) / (2 * b * c))
-    delta = m.acos(((1+x)**2 + c**2 - a**2) / (2 * (1+x) * c))
-    d = m.sqrt(b**2 + c**2 - 2 * b * c * m.cos(gamma + delta))
+    b, c = calc_side(2, a, beta), calc_side(1+x, a, beta)
+    gamma, delta = calc_angle(b,c, 1-x), calc_angle(1+x, c, a)
+    d = calc_side(b, c, gamma + delta)
     return radius(b, c, d), radius(1+x, c, a)
 
 def optpizza(alpha):
