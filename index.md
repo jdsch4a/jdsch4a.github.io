@@ -23,7 +23,7 @@ def pizza(x, alpha):
     a = m.sqrt(2 - 2 * m.cos(alpha))
     beta = .5 * (m.pi  - alpha)
     b, c = calc_side(2, a, beta), calc_side(1+x, a, beta)
-    gamma, delta = calc_angle(b,c, 1-x), calc_angle(1+x, c, a)
+    gamma, delta = calc_angle(b, c, 1-x), calc_angle(1+x, c, a)
     d = calc_side(b, c, gamma + delta)
     return radius(b, c, d), radius(1+x, c, a)
 
