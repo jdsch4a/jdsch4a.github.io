@@ -1,6 +1,6 @@
 See: [The Riddler](https://fivethirtyeight.com/features/can-you-eat-all-the-chocolates/)
 
-Let `x` be the distance and `alpha` the angle of the endpoints of the cut measured with respect to be the former center of the pizza.
+Let `x` be the distance and `alpha` the angle of the endpoints of the cut measured with respect to the former center of the pizza.
 
 <img src="images/pizza.jpg" alt="hi" class="inline"/>
 
