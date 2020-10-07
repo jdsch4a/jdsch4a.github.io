@@ -4,7 +4,7 @@ Let `x` be the distance and `alpha` the angle of the endpoints of the cut measur
 
 <img src="images/pizza.jpg" alt="hi" class="inline"/>
 
-After repositioning the pieces as shown in the figure, calculate the lengths `a`, `b`, `c` and `d` and minimize the radius of the circumscribed circles of the triangles with sides `(a, c, 1+x)` and `(b, c, d)`:
+After repositioning the pieces as shown in the figure, calculate the lengths `a`, `b`, `c` and `d` and simultaneously minimize the radii of the circumscribed circles of the triangles with sides `(a, c, 1+x)` and `(b, c, d)`:
 
 ```python
 from scipy import optimize as opt
